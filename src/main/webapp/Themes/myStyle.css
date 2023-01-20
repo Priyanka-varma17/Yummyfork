@@ -1,0 +1,421 @@
+@charset "ISO-8859-1";
+
+
+
+.container{
+	background-color:white;
+	height:470px;
+	width:420px;
+	margin:70px auto;
+}
+.signupform{
+	margin:auto;
+}
+.signupcontainer{
+	background-color:white;
+	height:590px;
+	width:550px;
+	margin:auto;
+}
+#heading{
+	clear:both;
+	text-align:center;
+	
+	
+}
+.mb-3{
+	margin-bottom:10px;
+}
+.signupcontainer .signuplabel{
+	text-align:center;
+	font-size:30px;
+	padding-top:20px;
+}
+.signuprole{
+	margin-left:170px;
+	font-size:20px;	
+}
+#orderlink{
+	margin-left:25em;
+	color:black;
+	font-size:20px;
+	width:50px;
+	text-decoration:none;
+	border:1px solid black;
+	padding:10px 70px;
+	border-radius:20px;
+}
+#profileUpdatelink{
+	color:black;
+	font-size:16px;
+	width:40px;
+	text-decoration:none;
+	padding:8px 70px;	
+}
+
+#orderlink:hover, #profileUpdatelink:hover{
+	color:white;
+	background-color:green;
+}
+.container .label{
+	text-align:center;
+	font-size:30px;
+	padding-top:20px;
+}
+.uname, .pwd, .role{
+	
+	margin-left:90px;
+	font-size:20px;
+}
+.uname,.pwd {
+	margin-top:20px;
+}
+
+input.input{
+	border:1px solid black;
+	margin-left:90px;
+	margin-top:10px;
+	height:25px;
+	width:250px;
+}
+.btn{
+	margin-left:20px;
+	width:120px;
+	height:40px;
+	color:white;
+	font-weight:bold;
+	font-size:20px;
+	background-color:#3a32e4;
+	border:none;
+	border-radius:9px;
+}
+.loginbtn{
+	margin-top:30px;
+	margin-left:150px;
+	width:120px;
+	height:40px;
+	color:white;
+	font-weight:bold;
+	font-size:20px;
+	background-color:#3a32e4;
+	border:none;
+	border-radius:9px;
+}
+.btn:hover,.loginbtn:hover{
+	background-color:#221ac6;
+	
+	cursor:pointer;
+}
+.signup{
+	margin-top:10px;
+	
+	text-align:center;
+	
+}
+
+.row1 {
+	padding-left:50px;
+}
+
+.row1 input{
+	height:25px;
+	width:85%;
+}
+.row2 input{
+	height:25px;
+	width:85%;
+}
+
+.tlspace{
+	padding-top:25px;
+}
+
+.tispace{
+padding-top:10px;	
+}
+
+.register{
+	margin-top:50px;
+	margin-left:150px;
+	width:250px;
+	height:40px;
+	color:white;
+	font-weight:bold;
+	font-size:20px;
+	background-color:#3a32e4;
+	border:none;
+	border-radius:9px;
+	
+}
+.register:hover{
+	background-color:#221ac6;
+	
+	cursor:pointer;
+}
+#signuptable{
+	margin-left:10px;
+	width:33em;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+li{
+	 display:inline-block;
+	 width:190px;
+	 
+}
+
+li a , li #username{
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+  text-decoration:none;
+  padding-left:30px;
+  padding-right:30px;
+  color:white;
+  font-size:20px;
+  background-color:powderblue;
+}
+
+.navigation-bar{
+	width:100%;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+li a:hover{
+ background-color:lightblue;
+}
+
+#foodListTable th,#foodListTable td{
+
+	
+	border:1px solid black;
+	cellspacing:5px;
+}
+.colwidth{
+	width:130px;
+	height:40px;
+}
+
+.operationcolwidth{
+width:100px;	
+}
+#quantityinput{
+	width:90px;
+}
+table#foodListTable td{
+	height:28px;
+}
+table#foodListTabl .tdwidth{
+	width:77px;
+}
+
+/*home and header style*/
+#LoggedUser{
+	color:white;
+	font-size:15px;
+	text-align:right;
+	margin-top:10px;
+}
+.header {
+	width: 102%;
+	background-color: orange;
+	height: 110px;
+	margin-left: -7px;
+	margin-top: -10px;
+	box-shadow: 2px 2px 0.5px 0.5px lightgrey;
+}
+
+.cname {
+	width: 500px;
+	height: 100px;
+	float: left;
+}
+
+.menus {
+	height: 100px;
+	float: left;
+	margin-top: 45px;
+	font-family: sans-serif;
+	margin-right: 30px;
+	font-size: 21px;
+}
+
+.menus a, .menus select {
+	text-decoration: none;
+	color: rgb(126, 41, 41);
+}
+
+.menus a:hover {
+	text-decoration-line: underline;
+}
+
+img {
+	width: 140px;
+	height: 100px;
+
+}
+
+#logoid{
+	margin:-10px;
+width: 140px;
+	height: 100px;	
+}
+.cname1 {
+	width: 150px;
+	height: 90px;
+	margin-left: 160px;
+	margin-top: -70px;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 40px;
+	color: #81412C;
+}
+.addToCartbtn:hover{
+	background-color:green;
+	color:white;
+}
+.cname {
+	float: left;
+	margin: 20px;
+}
+
+.dropbtn {
+	background-color: orange;
+	color: rgb(126, 41, 41);
+	padding-top: 16px;
+	font-size: 22px;
+	border: none;
+	margin-top: 29px;
+	margin-right: 17px;
+	padding-left: 0px;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.home {
+	text-align: center;
+	width: 100%;
+	font-size: 60px;
+	line-height: 120px;
+	margin-top: 200px;
+	color: blue;
+	animation-name: myanim;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+}
+
+@keyframes myanim {
+	0% {
+	color: rgb(37, 25, 25);
+	transform: scaleY(2);
+}
+
+}
+.footer {
+	margin-top: 42px;
+	margin-left: -20px;
+	margin-bottom: -20px;
+	border: none;
+	width: 102%;
+	padding-top: 20px;
+	height: 330px;
+	text-align: left;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #5E5650;
+	color: white;
+}
+
+.tablefooter {
+	width: 80%;
+}
+
+.tablefooter th {
+	width: 450px;
+	font-size: 20px;
+	padding-left:150px;
+}
+
+.tablefooter td {
+	text-align: right;
+}
+.footer .tablefootertr hr{
+	margin-left:-80px;
+}
+
+.tablefooter a {
+	text-decoration: none;
+	color: white;
+}
+
+.tablefooter a:hover {
+	color: darkgrey;
+}
+
+.dropdown-content a:hover {
+	text-decoration-line: underline;
+	background-color: #B39879;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	text-decoration-line: underline;
+}
+#updateprofile{
+	margin:auto;
+	width:500px;
+	
+}
+
+@media screen and (max-width:1070px)
+{
+	
+
+.cname {
+	width: 450px;
+	height: 100px;
+	float: left;
+}
+
+.menus {
+	height: 100px;
+	float: left;
+	margin-top: 45px;
+	font-family: sans-serif;
+	margin-right: 40px;
+	font-size: 20px;
+}
+
+.home{
+	margin-top:55px;
+	font-size: 50px;
+}
+
