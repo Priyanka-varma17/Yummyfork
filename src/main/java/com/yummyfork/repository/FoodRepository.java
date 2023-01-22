@@ -17,7 +17,7 @@ public class FoodRepository {
 	
 	DatabaseConnection db=new DatabaseConnection();
 	
-	public int addFood(Food food)throws SQLException{		//ex
+	public int addFood(Food food)throws SQLException{		
 		
 		Connection connection=db.getConnection();
 				PreparedStatement pst=connection.prepareStatement(QueryUtil.addFood);
@@ -30,7 +30,7 @@ public class FoodRepository {
 	return pst.executeUpdate();
 	}
 	
-	public Food getFoodById(int foodId) throws SQLException{		//ex
+	public Food getFoodById(int foodId) throws SQLException{		
 				
 		Connection con=db.getConnection();
 		PreparedStatement pst=con.prepareStatement(QueryUtil.getFoodById);
@@ -74,7 +74,7 @@ public class FoodRepository {
 		return null;
 	}
 
-	public List<Food> getFoodByName(String foodName) throws SQLException{		//ex
+	public List<Food> getFoodByName(String foodName) throws SQLException{		
 		Connection con=db.getConnection();
 		List<Food> foodList=new ArrayList<Food>();
 		PreparedStatement pst=con.prepareStatement(QueryUtil.getFoodByName);
@@ -117,8 +117,7 @@ public class FoodRepository {
 			FoodCategory fc=new FoodCategory();
 			fc.setFoodCategoryName(rs.getString(1));
 			fc.setMainCategory(rs.getString(2));
-			
-			//foodList.add(fc);
+
 		}
 		return foodList;
 		
@@ -137,7 +136,7 @@ public class FoodRepository {
 			return pst.executeUpdate();			
 	}
 	
-	public int deleteFoodById(int foodId) throws SQLException{		//ex
+	public int deleteFoodById(int foodId) throws SQLException{		
 		Connection con=db.getConnection();
 				
 				PreparedStatement pst=con.prepareStatement(QueryUtil.deleteFoodById);
@@ -157,7 +156,7 @@ public class FoodRepository {
 		
 	}
 
-	public List<Food> getAllFood() throws SQLException{		//ex
+	public List<Food> getAllFood() throws SQLException{		
 		Connection con=db.getConnection();
 		List<Food> foodList=new ArrayList<Food>();
 		PreparedStatement pst=con.prepareStatement(QueryUtil.getAllFood);

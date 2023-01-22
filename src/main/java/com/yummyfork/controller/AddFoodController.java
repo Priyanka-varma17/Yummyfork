@@ -69,7 +69,6 @@ public class AddFoodController extends HttpServlet {
 			throws ServletException, IOException {
 
 		RequestDispatcher rd;
-		PrintWriter out = response.getWriter();
 
 		response.setContentType("text/html");
 
@@ -123,21 +122,17 @@ public class AddFoodController extends HttpServlet {
 				e.printStackTrace();
 			}
 		} else if (operation != null && operation.equalsIgnoreCase("update")) {
-
-			System.out.println("entered into addcontroller update ..........");
-
+			
 			int id = Integer.parseInt(request.getParameter("foodId"));
 			String name = request.getParameter("foodName");
 			double price = Double.parseDouble(request.getParameter("foodPrice"));
 			int quantity = Integer.parseInt(request.getParameter("quantity"));
 			String category = request.getParameter("category");
 
-			System.out.println(id + "------" + name + "------" + price + "------" + quantity + "------" + category);
-
 			Food f = new Food(id, name, price, quantity, category);
 
 			int flag = fs.updateFood(f);
-			System.out.println("inside addFoodController flag= " + flag);
+
 			if (flag > 0) {
 				response.sendRedirect("AddFoodController?operation=");
 			} else {
@@ -146,8 +141,6 @@ public class AddFoodController extends HttpServlet {
 		} else if (operation != null && operation.equals("searchFood")) {
 
 			String foodName = request.getParameter("search");
-
-			System.out.println("foodName===>" + foodName);
 
 			List<Food> foodList = fs.getFoodByName(foodName);
 

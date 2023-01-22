@@ -27,12 +27,11 @@ public class UserRepository {
 			int rows=pst.executeUpdate();
 			System.out.println(rows);
 			if(rows>0) {
-				System.out.println(" Admin Record inserted successfully");
-				System.out.println("*****************************");
+				
 				return 1;
 			}
 			else {
-				System.out.println("Failed to insert record");
+
 				return 0;
 			}
 		
@@ -54,14 +53,13 @@ public class UserRepository {
 		while(rs.next()) {
 			User u=new User();
 			u.setRole(rs.getString(1));
-//			u.setUname(rs.getString(2));
-//			u.setUpwd(rs.getString(3));
+
 			userList.add(u);
 		}
 		return userList;
 		
 	}
-public int getUserByUsername(User user) throws SQLException{			//EX
+public int getUserByUsername(User user) throws SQLException{			
 			
 		Connection con=db.getConnection();
 		PreparedStatement pst=con.prepareStatement(QueryUtil.getUserByEmail);
@@ -78,21 +76,20 @@ public int getUserByUsername(User user) throws SQLException{			//EX
 			}
 		}
 
-public int updateUser(User user) throws SQLException {			//EX
+public int updateUser(User user) throws SQLException {			
 	try(Connection con=db.getConnection();
 			PreparedStatement pst=con.prepareStatement(QueryUtil.updateUser);){
 		
 		
 		pst.setString(1, user.getUpwd());
 		pst.setString(2, user.getUname());
-	
-		System.out.println("username "+user.getUname()+" password "+user.getUpwd());
+
 		return pst.executeUpdate();
 		
 	}
 }
 
-public int deleteUserByUsername(String username) throws SQLException{		//ex
+public int deleteUserByUsername(String username) throws SQLException{		
 	try(Connection con=db.getConnection();
 						
 			PreparedStatement pst=con.prepareStatement(QueryUtil.deleteUserByUsername);){
@@ -104,7 +101,7 @@ public int deleteUserByUsername(String username) throws SQLException{		//ex
 }
 
 public int userValidity(User u) throws SQLException{
-	// TODO Auto-generated method stub
+
 	try(Connection con=db.getConnection();
 			PreparedStatement pst=con.prepareStatement(QueryUtil.isUserValid)){
 		
@@ -115,19 +112,16 @@ public int userValidity(User u) throws SQLException{
 		ResultSet rs=pst.executeQuery();
 		
 		if(rs.next()) {
-			System.out.println("valid");
 			return 1;
 		}
 		else {
-			System.out.println("Invalid");
-
-			return 0;
+		return 0;
 		}
 	}
 
 	}
 
-public User getUserByEmail(String mail) throws SQLException{		//ex
+public User getUserByEmail(String mail) throws SQLException{		
 	
 	Connection con=db.getConnection();
 	PreparedStatement pst=con.prepareStatement(QueryUtil.getUserByEmail);
@@ -150,7 +144,7 @@ public User getUserByEmail(String mail) throws SQLException{		//ex
 	
 }
 
-public int checkPwdByEmail(String email,String pwd) throws SQLException{			//TESTING
+public int checkPwdByEmail(String email,String pwd) throws SQLException{			
 	Connection con=db.getConnection();
 	PreparedStatement pst=con.prepareStatement(QueryUtil.checkPwdByEmail);
 	

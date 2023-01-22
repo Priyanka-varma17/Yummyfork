@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Properties;
 import java.util.Random;
-
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
@@ -19,9 +18,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 import com.yummyfork.dto.User;
-
 import com.yummyfork.services.UserService;
 
 
@@ -69,7 +66,7 @@ public class ForgotPassword extends HttpServlet {
 					props.put("mail.smtp.port", "465");
 					Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
 						protected PasswordAuthentication getPasswordAuthentication() {
-							return new PasswordAuthentication("varmapriyanka1998@gmail.com", "xnhbexrfjiexmddh");
+							return new PasswordAuthentication("enter your email", "enter webapp pwd");	//Enter your email and web app password
 						}
 					});
 					// compose message
@@ -89,11 +86,9 @@ public class ForgotPassword extends HttpServlet {
 					}
 					rd = request.getRequestDispatcher("EnterOtp.jsp");
 					request.setAttribute("message","OTP is sent to your email id");
-					//request.setAttribute("connection", con);
 					mySession.setAttribute("otp",otpvalue); 
 					mySession.setAttribute("email",email); 
 					rd.forward(request, response);
-					//request.setAttribute("status", "success");
 				}
 			}
 			else {
@@ -115,7 +110,6 @@ public class ForgotPassword extends HttpServlet {
 				request.setAttribute("status", "success");
 				rd=request.getRequestDispatcher("newPassword.jsp");
 				rd.forward(request, response);
-				
 			}
 			else
 			{
@@ -123,7 +117,6 @@ public class ForgotPassword extends HttpServlet {
 				response.setContentType("text/html");	
 			   rd=request.getRequestDispatcher("EnterOtp.jsp");
 				rd.include(request, response);
-			
 			}
 		}
 		

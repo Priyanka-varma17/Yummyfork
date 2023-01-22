@@ -12,16 +12,22 @@ body{
  	background-color: lightgrey;
  	 	background-image: url('Images/bgimg.png');
  	background-repeat: no-repeat;
- 	background-size: 77em 46em;
+ 	background-size: 85em 46em;
 }
 
 </style>
 </head>
 <body>
+
 	
 		<form action="AddCustomerController" method="POST" name="form">
 		<div class ="signupcontainer">
 		<h1 class="signuplabel" >SignUp</h1>
+		
+		<% if (request.getAttribute("signUpMsg")!=null) {
+			out.print("<p style='color:red;margin-left:9em;'>"+request.getAttribute("signUpMsg")+"</p>");
+			
+		} %>
 			<div class="signupform">
 			
 			

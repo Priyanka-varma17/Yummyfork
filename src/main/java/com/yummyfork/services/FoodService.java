@@ -2,7 +2,6 @@ package com.yummyfork.services;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import com.yummyfork.dto.Food;
 import com.yummyfork.repository.FoodRepository;
 
@@ -23,8 +22,6 @@ public class FoodService {
 		try {
 			return fr.addFood(f);
 		} catch(Exception e) {
-			//e.printStackTrace();
-			System.out.println("can not add food");
 			return 0;
 		}
 	}
@@ -34,7 +31,7 @@ public class FoodService {
 		try {
 			return fr.updateFood(f);
 		} catch(Exception e) {
-			System.out.println("cannot update food");
+
 			return 0;
 		}
 	}

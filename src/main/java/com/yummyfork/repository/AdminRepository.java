@@ -12,7 +12,7 @@ public class AdminRepository {
 
 DatabaseConnection db=new DatabaseConnection();
 	
-	public int addAdmin(Admin admin)throws SQLException{		//ex
+	public int addAdmin(Admin admin)throws SQLException{		
 		
 		try(Connection connection=db.getConnection();
 				PreparedStatement pst=connection.prepareStatement(QueryUtil.addAdmin);){
@@ -26,12 +26,9 @@ DatabaseConnection db=new DatabaseConnection();
 			int rows=pst.executeUpdate();
 			System.out.println(rows);
 			if(rows>0) {
-				System.out.println("Record inserted successfully");
-				System.out.println("*****************************");
 				return 1;
 			}
 			else {
-				System.out.println("Failed to insert record");
 				return 0;
 			}
 		
@@ -41,41 +38,7 @@ DatabaseConnection db=new DatabaseConnection();
 			return 0;
 		}
 	}
-	
-//public int getAdminByEmail(Admin admin) throws SQLException{			//ex
-//		
-//		
-//		try(Connection con=db.getConnection();
-//				PreparedStatement pst=con.prepareStatement(QueryUtil.getAdminByEmail);
-//				){
-//			
-//			pst.setString(1, admin.getAdminEmail());
-//			ResultSet rs=pst.executeQuery();
-//			if(rs.next()) {
-//		
-//				
-//				//getFoodInfo(new Food(rs.getString(1),rs.getFloat(2),rs.getInt(3),rs.getString(4)));
-//					
-//				System.out.println("Admin name:"+rs.getString("adminname"));
-//				System.out.println("Admin Address:"+rs.getString("adminaddress"));
-//				System.out.println("Admin Mobile:"+rs.getLong("adminmobile"));
-//				System.out.println("Admin Email:"+rs.getString("adminemail"));
-//				
-//				return 1;
-//			}
-//			else {
-//				System.out.println("Record not found for admin email:  "+admin.getAdminEmail());
-//				return 0;
-//			}
-//			
-//		}
-//		catch(Exception e) {
-//			e.printStackTrace();
-//			return 0;
-//		}
-//		
-//	}
-	
+
 	public Admin getAdminByEmail(String mail) throws SQLException{		//ex--
 		
 		Connection con=db.getConnection();

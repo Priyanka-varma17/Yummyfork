@@ -72,7 +72,7 @@ public class CartRepository {
 		return false;
 	}
 	
-	public List<Cart> getCartDetails(String username) throws SQLException{		//test1
+	public List<Cart> getCartDetails(String username) throws SQLException{		
 		Connection con=db.getConnection();
 		List<Cart> itemList=new ArrayList<Cart>();
 		
@@ -86,11 +86,10 @@ public class CartRepository {
 						
 			cart.setCartId(rs.getInt("cart_Id"));
 			cart.setFoodId(rs.getInt("food_Id"));
-			cart.setCustEmail(rs.getString(3));			//Taking only column index but not column name why?
+			cart.setCustEmail(rs.getString(3));			
 			cart.setQuantity(rs.getInt("cart_quantity"));
 			cart.setFoodName(rs.getString("foodname"));
 			
-			System.out.println("cart details are: "+rs.getInt("cart_Id")+rs.getInt("food_Id")+rs.getString(3)+rs.getInt("cart_quantity")+rs.getString("foodname"));
 			itemList.add(cart);
 		}
 		return itemList;

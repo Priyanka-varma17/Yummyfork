@@ -12,7 +12,7 @@ public class UserService {
 
 	public UserService(UserRepository ar) {
 		super();
-		this.ur = ur;
+		
 	}
 	public UserService() {
 		ur=new UserRepository();

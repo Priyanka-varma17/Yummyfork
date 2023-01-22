@@ -46,7 +46,7 @@ public class OrdersRepository {
 		}
 	}
 	
-	public List<Orders> getOrderListByEmail(String email) throws SQLException{		//ex
+	public List<Orders> getOrderListByEmail(String email) throws SQLException{		
 		Connection con=db.getConnection();
 		List<Orders> orderList=new ArrayList<Orders>();
 		PreparedStatement pst=con.prepareStatement(QueryUtil.getOrderListByEmail);
@@ -62,9 +62,6 @@ public class OrdersRepository {
 			o.setStatus(rs.getString(3));
 			o.setEmail(rs.getString(4));
 			orderList.add(o);
-			
-			
-			System.out.println("inside orders repository=== "+rs.getInt(1)+"====="+rs.getDouble(2)+"====="+rs.getString(3)+"====="+rs.getString(4));
 		}
 		return orderList;
 		
