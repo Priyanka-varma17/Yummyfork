@@ -75,8 +75,6 @@ body{
 				</table>
 				<input class="register" type="submit" value="Register"><br>
 				<div class="signup">Already have an account? <a href="Login.jsp">Login</a></div>
-				
-				
 		
 			</div>
 		</div>
