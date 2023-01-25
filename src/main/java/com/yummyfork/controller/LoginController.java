@@ -58,7 +58,7 @@ public class LoginController extends HttpServlet {
 		else {
 			
 			rd=request.getRequestDispatcher("Login.jsp");
-			out.println("Invalid Username or password");
+			request.setAttribute("signupMsg","Invalid Username or password");
 			rd.include(request,response);
 		}
 

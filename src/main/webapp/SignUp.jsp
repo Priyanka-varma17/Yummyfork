@@ -69,7 +69,14 @@ body{
 				
 				<tr>
 				<td class="row1 tispace"><input type="password" name="pwd" placeholder="Enter password" required></td>
-				<td class="row2 tispace"><input type="password" placeholder="Re-enter password" required></td>
+				<td class="row2 tispace"><input type="password" name="reEnterPwd" placeholder="Re-enter password" required></td>
+				</tr>
+				
+				<tr>
+				<td class="row1 tispace"></td>
+				<td class="row2 tispace"><%if(request.getAttribute("reEnterPwd")!=null){
+					out.print("<p style='color:red;margin-top:1px;margin-botton:-10px'>"+request.getAttribute("reEnterPwd")+"</p>");
+				}%></td>
 				</tr>
 				
 				</table>

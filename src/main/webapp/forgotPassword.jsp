@@ -9,6 +9,31 @@
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="Themes/newStyle.css">
+<style>
+#backLogin{
+	text-decoration:none;
+	border:2px solid red;
+	color:white;
+	padding:4px 12px;
+	background:red;
+	
+}
+#backLogin:hover{
+background:darkred;
+border:2px solid darkred;
+}
+#fgtBtn{
+	background:green;
+	color:white;
+	border:2px solid green;
+}
+#fgtBtn:hover{
+background:darkgreen;
+border:2px solid darkgreen;
+}
+
+
+</style>
 </head>
 
 <body style="background-color:lightgrey">
@@ -30,10 +55,15 @@
 <label>Enter your registered email address</label><br>
 
 
-<input type="email" name="email" placeholder="Enter email" style="width:280px" required><br><br>
+<input type="email" name="email" placeholder="Enter email" style="width:280px" required><br>
 
-<input type="submit" class="fgtBtn" value="Get New Password">&nbsp;&nbsp;&nbsp;
-<a class="fgtBtn" id="backLogin" href="Login.jsp">Back to Login</a>
+<%if(request.getAttribute("message")!=null){
+	out.print("<p style='color:red;'>"+request.getAttribute("message")+"</p>");
+	}%>
+
+
+<input type="submit" id="fgtBtn" class="fgtBtn" value="Get New Password" style="margin-top:15px">&nbsp;&nbsp;&nbsp;
+<a class="fgtBtn" id="backLogin" href="SignUp.jsp">SignUp</a>
 
 <input type="hidden" name="operation" value="forgotpassword">
 

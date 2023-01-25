@@ -49,7 +49,6 @@ public class ForgotPassword extends HttpServlet {
 			int flag=us.checkUsernameExist(u);			//to check whether entered email is already exist or not in our User table
 														//if yes, then you will get otp otherwise u have to signup
 			if(flag>0) {
-				out.println("SENDING OTP ON EMAIL");
 				
 				if(email!=null || !email.equals("")) {
 					
@@ -67,7 +66,7 @@ public class ForgotPassword extends HttpServlet {
 					Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
 						protected PasswordAuthentication getPasswordAuthentication() {
 
-							return new PasswordAuthentication("", "");  //Enter your email and web app pwd
+							return new PasswordAuthentication("Your email","enter web app password");  //Enter your email and web app pwd
 
 						}
 					});
@@ -96,7 +95,7 @@ public class ForgotPassword extends HttpServlet {
 			else {
 				response.setContentType("text/html");
 				rd=request.getRequestDispatcher("forgotPassword.jsp");
-				out.println("Entered Email is not registered, Please signup !");
+				request.setAttribute("message","Entered Email is not registered, Please signup!");
 				rd.include(request, response);
 			}
 		}
@@ -115,7 +114,7 @@ public class ForgotPassword extends HttpServlet {
 			}
 			else
 			{
-				request.setAttribute("message","wrong otp");
+				request.setAttribute("message","Wrong OTP");
 				response.setContentType("text/html");	
 			   rd=request.getRequestDispatcher("EnterOtp.jsp");
 				rd.include(request, response);
@@ -141,15 +140,13 @@ public class ForgotPassword extends HttpServlet {
 					response.setContentType("text/html");
 					System.out.println("password updated successfully");
 					
-					out.println("Password updated successfully");
-					
-					request.setAttribute("status", "resetSuccess");
+					request.setAttribute("status", "Password Updated Successfully");
 					rd = request.getRequestDispatcher("Login.jsp");
 					rd.include(request, response);
 					
 				}
 				else {
-					request.setAttribute("status", "resetFailed");
+					request.setAttribute("status", "Password Reset Failed");
 					System.out.println("password not updated ");
 				}
 			}

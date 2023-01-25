@@ -13,27 +13,6 @@ body {
 	background-size: 86em 46em;
 }
 
-
-
-/*.containers {
-	background-repeat: no-repeat;
-	background-size: 86em 46em;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.containers::before {
-	content: "";
-	background-size: 86em 46em;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	left: 0px;
-	background-image: url('Images/background.webp');
-	opacity: 0.7;
-}*/
 </style>
 </head>
 <body>
@@ -54,6 +33,17 @@ body {
 		</div>
 		
 <%} %>
+
+
+
+<%if(request.getAttribute("logoutMsg")!=null){
+	
+		out.print("<p style='color:red;clear:both;margin-left:30em;font-size:20px;'>"+request.getAttribute("logoutMsg")+"</p>");
+	
+	}%>
+
+
+
 		<div class="home">
 			Let the aroma of freshly cooked bread waft <br>through your home
 			<br>with Bread Basket Today

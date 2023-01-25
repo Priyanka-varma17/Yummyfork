@@ -15,13 +15,28 @@ body{
  	background-repeat: no-repeat;
  	background-size: 85em 46em;
 }
+#showpwd{
+	margin-left:90px;
+	font-size:18px;
+	margin-top:18px;
+	
+}
 
 </style>
+
 </head>
 <body>
 	<form action="LoginController" method="POST" name="form">
 		<div class ="container">
 		<h1 class="label"  >Login</h1>
+		
+		<%if(request.getAttribute("status")!=null){
+			out.print("<p style='color:red;margin-left:7em;'>"+request.getAttribute("status")+"</p>");
+		}%>
+		
+		<%if(request.getAttribute("signupMsg")!=null){
+			out.print("<p style='color:red;margin-left:7em;'>"+request.getAttribute("signupMsg")+"</p>");
+		}%>
 			<div class="loginform">
 			
 				<div class="role">
@@ -37,7 +52,9 @@ body{
 				
 				
 				<div class="pwd"><label for="pwd"> Enter Password:</label></div>
-				<input class="input" type="password" name="pwd" placeholder="Enter password" required><br>
+				<input class="input" id="pwd" type="password" name="pwd" placeholder="Enter password" required><br>
+				
+				<div id="showpwd"><input type="checkbox" onclick="showPwd()">Show password</div>
 				
 				<div class="login-btn">
 				<input class="loginbtn"  type="submit" value="Login"> </div>
@@ -50,9 +67,18 @@ body{
 		</div>
 	
 	</form>
-	
-	<!--  	<script src="LoginValidation.js"></script>		-->
-	
-	
+
+
+	<script>
+		function showPwd() {
+			let val = document.getElementById("pwd");
+			if (val.type === 'password') {
+				val.type = "text";
+			} else {
+				val.type = "password";
+			}
+		}
+	</script>
+
 </body>
 </html>

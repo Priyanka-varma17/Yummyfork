@@ -26,7 +26,7 @@ public class LogoutController extends HttpServlet {
 		PrintWriter out=response.getWriter();
 		session.invalidate();
 		
-		out.println("Logged Out Successfully!!!");
+		request.setAttribute("logoutMsg","Logged out Seccessfully!!");
 		rd=request.getRequestDispatcher("Home.jsp");
 		rd.include(request, response);
 	}

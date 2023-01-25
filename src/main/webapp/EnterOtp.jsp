@@ -8,6 +8,17 @@
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="Themes/newStyle.css">
+<style>
+#otpButton{
+	background:green;
+	color:white;
+	border:5px solid green;
+}
+#otpButton:hover{
+background:darkgreen;
+border:5px solid darkgreen;
+}
+</style>
 </head>
 
 <body style="background-color: lightgrey">
@@ -22,7 +33,7 @@
 		  
 		  %>
 		<br> <input type="text" name="otp" placeholder="Enter OTP"><br><br>
-		<input type="submit" value="Reset Password"> <input
+		<input type="submit"  id="otpButton" value="Reset Password"> <input
 			type="hidden" name="operation" value="ValidateOtp">
 	</div>
 	</form>
