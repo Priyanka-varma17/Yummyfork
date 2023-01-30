@@ -16,40 +16,12 @@
 	
 	
 		<style>
-/*	
-	.imgcss{
-	 position: relative; 
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-	}*/
-/*	.imgcss::before {    
-      content: "";
-      background-image: url('Images/foodImg.jpeg');
-      background-size: cover;
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      opacity: 0.75;
-}
-form, h2{
-  position: relative;
-  color: grey;  
- 
-  line-height: 0.9;
-  text-align: center;
-}*/
-
 
 body{
- 	background-color: lightgrey;
- 	background-image: url('Images/bgimg.png');
- 	background-repeat: no-repeat;
- 	background-size: 77em 46em;
+ background-color: lightgrey;
+	background-image: url('Images/bgimg.png');
+	background-repeat: no-repeat;
+	background-size: 85em 46em;
 }
 
 </style>

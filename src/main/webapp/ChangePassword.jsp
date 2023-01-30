@@ -27,7 +27,7 @@ body {
 
 	<jsp:include page="Header.jsp" />
 	<form method="post" action="AddCustomerController">
-		<div
+		<div id="boxDiv"
 			style="background-color: white; margin: auto; margin-top: 60px; padding: 40px; padding-bottom: 90px; width: 400px; padding-left: 90px;">
 			<h2 style="margin-left:-10px">Change Password</h2>
 

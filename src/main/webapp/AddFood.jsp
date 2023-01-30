@@ -9,11 +9,12 @@
 <link rel="stylesheet" href="Themes/myStyle.css">
 <style>
 body{
- 	background-color: lightgrey;
- 	background-image: url('Images/bgimg.png');
- 	background-repeat: no-repeat;
- 	background-size: 77em 46em;
+ background-color: lightgrey;
+	background-image: url('Images/bgimg.png');
+	background-repeat: no-repeat;
+	background-size: 85em 46em;
 }
+
 
 </style>
 </head>
